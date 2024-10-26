@@ -6,6 +6,6 @@ resource "google_project" "my_project" {
 
 resource "google_project_service" "name" {
   for_each = toset(var.services)
-  project = google_project.my_project.project_id
-  service = each.value
+  project  = google_project.my_project.project_id
+  service  = each.value
 }
