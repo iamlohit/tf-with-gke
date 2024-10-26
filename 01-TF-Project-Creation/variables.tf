@@ -12,3 +12,8 @@ variable "billing_account_id" {
   description = "The billing account ID"
   type        = string
 }
+
+variable "services" {
+  type = list(string)
+  default = [ "compute.googleapis.com", "storage.googleapis.com", "container.googleapis.com" ]
+}
