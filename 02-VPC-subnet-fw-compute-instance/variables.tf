@@ -8,16 +8,6 @@ variable "project_id" {
   type        = string
 }
 
-variable "billing_account_id" {
-  description = "The billing account ID"
-  type        = string
-}
-
-variable "services" {
-  type    = list(string)
-  default = ["compute.googleapis.com", "storage.googleapis.com", "container.googleapis.com", "cloudresourcemanager.googleapis.com"]
-}
-
 variable "region" {
   type    = string
   default = "us-central1"
